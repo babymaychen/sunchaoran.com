@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      title #{title}
+
+    // 加载 header 信息
+    include ./header
+
+  body
+    // 顶部导航条
+    block topNav
+      include ./topNav
+
+    // 副导航条
+    block neckNav
+
+
+    // 内容
+    block content
+
+    block leftSideMenu
+
+    block rightSideMenu
+
+    // 页脚
+    block footer
+      include ./footer
+
+    // 页脚 JS
+    block footerJs
+
+    //  模态框
+    block modal
+      include ./home/login/loginModal
+      include ./home/signup/signupModal
+      include ./home/forgot/forgotModal

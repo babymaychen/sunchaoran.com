@@ -1,0 +1,32 @@
+extends ../mainLayout
+
+block content
+  section
+    .container-fluid#content
+
+      .row
+        .col-sm-12.col-md-2.hidden-sm.hidden-xs.margin-top-40
+          .list-group
+            a.list-group-item.h4(href='/')
+              i.fa.fa-home    首页
+            a.list-group-item.h4(href='/blog')
+              i.fa.fa-shopping-cart    博客
+            a.list-group-item.h4(href='/app')
+              i.fa.fa-shopping-cart    App
+            a.list-group-item.h4(href='/agencybuy')
+              i.fa.fa-shopping-cart    购买
+            a.list-group-item.h4(href='/chatroom')
+              i.fa.fa-comments    聊天室
+            a.list-group-item.h4(href='/game')
+              i.fa.fa-gamepad    小游戏
+            a.list-group-item.h4(href='/aboutme')
+              i.fa.fa-smile-o    关于我
+        .col-sm-12.col-md-10
+          .row
+            .col-md-12
+              .h2.text-center Release Notes
+              p v 0.1.0
+              p 目前可用的模块：
+              p 注册，登录，找回密码，重置密码，聊天室群聊
+              p 页脚链接图标都可以点击，源代码已上传至Github
+              p 目前网站还在持续建设中，如果你有好的建议或者发现了什么bug可以点击页脚的信封图案告诉作者

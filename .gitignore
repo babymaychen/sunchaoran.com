@@ -1,0 +1,6 @@
+*.html
+.idea
+config.js
+bower_components
+node_modules
+public/vendor

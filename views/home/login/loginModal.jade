@@ -1,0 +1,21 @@
+#modal-login.modal.fade
+  .modal-dialog
+    .modal-content.max-width-500
+      form
+        .modal-header.text-center 登录
+        .modal-body.padding-horizontal-40
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-envelope-o.min-width-30
+            input.form-control(type='text' placeholder='电子邮箱 或 用户名')#login-username
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-key.min-width-30
+            input.form-control(type='password' placeholder='密码')#login-password
+          .alert.alert-warning.alert-dismissible(role='alert')#warning-login
+            i.fa.fa-close(aria-hidden='true')
+            strong#login-callback-info
+        .modal-footer
+          button.btn.btn-default(data-toggle="modal",data-backdrop="static" , data-target="#modal-forgot", data-dismiss="modal") 忘记密码?
+          button.btn.btn-default#btn-login-close(type="button", data-dismiss="modal") 关闭
+          button.btn.btn-success#btn-login(type="button") 登录

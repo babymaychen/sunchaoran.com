@@ -1,0 +1,74 @@
+doctype html
+
+html(lang='en')
+  head
+    title 2048
+
+    link(href="/views/game/2048/style/main.min.css" rel="stylesheet" type="text/css")
+    link(rel="apple-touch-icon" href="meta/apple-touch-icon.png")
+    link(rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)")
+    link(rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
+
+    meta(name="HandheldFriendly" content="True")
+    meta(name="MobileOptimized" content="320")
+    meta(name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui")
+  body
+    block content
+      .container
+        .heading
+          h1.title 2048
+          .scores-container
+            .score-container 0
+            .best-container 0
+
+        .above-game
+          p.game-intro 通过上下左右移动合并方块来取得
+            strong 2048 !
+          a.restart-button 新游戏
+
+        .game-container
+          .game-message
+            p
+            .lower
+              a.keep-playing-button 回到游戏
+              a.retry-button 再来一局
+
+          .grid-container
+            .grid-row
+              .grid-cell
+              .grid-cell
+              .grid-cell
+              .grid-cell
+            .grid-row
+              .grid-cell
+              .grid-cell
+              .grid-cell
+              .grid-cell
+            .grid-row
+              .grid-cell
+              .grid-cell
+              .grid-cell
+              .grid-cell
+            .grid-row
+              .grid-cell
+              .grid-cell
+              .grid-cell
+              .grid-cell
+
+          .tile-container
+
+    footer
+      block footer
+       script(src='/views/game/2048/js/main.min.js')
+       //script(src="/views/game/2048/js/bind_polyfill.js")
+       //script(src="/views/game/2048/js/classlist_polyfill.js")
+       //script(src="/views/game/2048/js/animframe_polyfill.js")
+       //script(src="/views/game/2048/js/keyboard_input_manager.js")
+       //script(src="/views/game/2048/js/html_actuator.js")
+       //script(src="/views/game/2048/js/grid.js")
+       //script(src="/views/game/2048/js/tile.js")
+       //script(src="/views/game/2048/js/local_storage_manager.js")
+       //script(src="/views/game/2048/js/game_manager.js")
+       //script(src="/views/game/2048/js/application.js")

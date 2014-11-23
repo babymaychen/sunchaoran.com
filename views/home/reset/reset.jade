@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      title 孙超然的个人网站
+
+    include ../../includes/head
+    script(src='/views/home/reset.min.js?#{cacheBreaker}')
+
+  body
+    block content
+      #view-reset.modal.fade
+        .modal-dialog
+          .modal-content.max-width-500
+            form
+              .modal-header.text-center 找回密码
+              .modal-body.padding-horizontal-40
+                .form-group.input-group
+                  .input-group-addon
+                    i.fa.fa-key.min-width-30
+                  input.form-control(type='text' placeholder='新的密码')#reset-password
+                .form-group.input-group
+                  .input-group-addon
+                    i.fa.fa-check-square-o.min-width-30
+                  input.form-control(type='password' placeholder='密码确认')#reset-repassword
+                .alert.alert-warning.alert-dismissible(role='alert')#warning-reset
+                  i.fa.fa-close(aria-hidden='true')
+                  strong#reset-callback-info
+              .modal-footer
+                button.btn.btn-success#btn-reset(type="button") 重置

@@ -1,0 +1,29 @@
+#modal-signup.modal.fade
+  .modal-dialog
+    .modal-content.max-width-500
+      form
+        .modal-header.text-center 注册
+        .modal-body.padding-horizontal-40
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-envelope-o.min-width-30
+            input.form-control(type='text' placeholder='电子邮箱')#signup-email
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-user.min-width-30
+            input.form-control(type='text' placeholder='用户名')#signup-username
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-key.min-width-30
+            input.form-control(type='password' placeholder='密码')#signup-password
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-check-square-o.min-width-30
+            input.form-control(type='password' placeholder='密码确认')#signup-repassword
+          // 警告框
+          .alert.alert-warning.alert-dismissible(role='alert')#warning-signup
+            i.fa.fa-close(aria-hidden='true')
+            strong#signup-callback-info
+        .modal-footer
+          button.btn.btn-default#btn-signup-close(type="button", data-dismiss="modal") 关闭
+          button.btn.btn-success#btn-signup(type="button") 注册

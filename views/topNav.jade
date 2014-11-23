@@ -1,0 +1,41 @@
+nav.navbar.navbar-default.navbar-fixed-top#topNav
+  .container
+    .navbar-header#topNavHeader
+
+      // 扩展按钮
+      button.navbar-toggle.collapsed(data-toggle='collapse' data-target="#topNavRight")
+        i.fa.fa-bars.fa-2x
+
+      // 导航条 Logo
+      a.navbar-brand(href='/') SunChaoran
+        .label.label-default Beta
+
+    .collapse.navbar-collapse.navbar-right#topNavRight
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.list-inline(href='/donate')
+            i.fa.fa-gift     捐助
+        if user && user.username
+          // 用户登录后显示
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown' href='#')
+              i.fa.fa-wrench    #{user.username}
+                i.fa.fa-caret-down.margin-left-10
+            ul.dropdown-menu
+              li
+                a(href='#{user.defaultReturnUrl}')
+                  i.fa.fa-pencil    用户信息
+              li
+                a(href='#')
+                  i.fa.fa-key    修改密码
+              li.divider
+              li
+                a(href='/logout')
+                  i.fa.fa-sign-out    登出
+        else
+          li
+            a.list-inline(href="#", data-toggle="modal",data-backdrop="static" , data-target="#modal-login")
+              i.fa.fa-sign-in     登录
+          li
+            a.list-inline(href="#", data-toggle="modal",data-backdrop="static" , data-target="#modal-signup")
+              i.fa.fa-user     注册

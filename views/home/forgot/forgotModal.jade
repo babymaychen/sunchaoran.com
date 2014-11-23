@@ -1,0 +1,17 @@
+#modal-forgot.modal.fade
+  .modal-dialog
+    .modal-content.max-width-500
+      form
+        .modal-header.text-center 找回密码
+        .modal-body.padding-horizontal-40
+          .form-group.input-group
+            .input-group-addon
+              i.fa.fa-envelope-o.min-width-30
+            input.form-control(type='text' placeholder='电子邮箱')#forgot-email
+          .alert.alert-warning.alert-dismissible(role='alert')#warning-forgot
+            i.fa.fa-info(aria-hidden='true')
+            strong#forgot-callback-info
+        .modal-footer
+          button.btn.btn-default#btn-forgot-return(type="button", data-toggle="modal", data-backdrop="static", data-target="#view-login", data-dismiss="modal") 返回登录
+          button.btn.btn-default#btn-forgot-close(type="button", data-dismiss="modal") 关闭
+          button.btn.btn-success#btn-forgot(type="button") 发送邮件

@@ -1,0 +1,7 @@
+extends ../mainLayout
+block content
+  section
+    if error && message
+      h1= message
+      h2= error.status
+      pre #{error.stack}
