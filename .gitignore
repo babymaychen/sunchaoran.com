@@ -1,4 +1,6 @@
 *.html
+*.min.js
+*.min.js.map
 .idea
 config.js
 bower_components

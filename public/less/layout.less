@@ -26,6 +26,11 @@ a:hover {
 }
 
 // 组件
+.left-side-menu a i{
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
 
 // 布局
 
@@ -40,6 +45,16 @@ a:hover {
 .margin-v(@margin:10px) {
   margin-top: @margin;
   margin-bottom: @margin;
+}
+
+.margin-h(@margin: 10px) {
+  margin-right: @margin;
+  margin-left: @margin;
+}
+
+.padding-h(@padding: 10px) {
+  padding-left: @padding;
+  padding-right: @padding;
 }
 
 .margin-top-20 {
@@ -81,5 +96,22 @@ a:hover {
 .margin-v-40 {
   .margin-v(40px);
 }
+
+.margin-h-10 {
+  .margin-h(10px);
+}
+
+.padding-h-40 {
+  .padding-h(40px);
+}
+
+.max-width-500 {
+  max-width: 500px;
+}
+
+.min-width-30 {
+  min-width: 30px;
+}
+
 
 // 效果

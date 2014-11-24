@@ -124,6 +124,7 @@ module.exports = function(grunt) {
                         'public/vendor/bootstrap/js/transition.js',
                         'public/vendor/momentjs/moment.js',
                         'public/vendor/nprogress/nprogress.js',
+                        'public/common/keycode.js',
                         'public/core/core.js'
                     ]
                 }

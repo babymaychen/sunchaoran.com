@@ -4,8 +4,10 @@ html(lang='en')
     block head
       title #{title}
 
-    // 加载 header 信息
-    include ./header
+      // 加载 header 信息
+      include ./header
+
+    script(src='/views/home/home.min.js?#{cacheBreaker}')
 
   body
     // 顶部导航条

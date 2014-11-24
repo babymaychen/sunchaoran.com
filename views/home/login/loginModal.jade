@@ -2,8 +2,8 @@
   .modal-dialog
     .modal-content.max-width-500
       form
-        .modal-header.text-center 登录
-        .modal-body.padding-horizontal-40
+        .modal-header.text-center.h3 登录
+        .modal-body.padding-h-40
           .form-group.input-group
             .input-group-addon
               i.fa.fa-envelope-o.min-width-30
@@ -13,7 +13,7 @@
               i.fa.fa-key.min-width-30
             input.form-control(type='password' placeholder='密码')#login-password
           .alert.alert-warning.alert-dismissible(role='alert')#warning-login
-            i.fa.fa-close(aria-hidden='true')
+            i.fa.fa-close.margin-h-10(aria-hidden='true')
             strong#login-callback-info
         .modal-footer
           button.btn.btn-default(data-toggle="modal",data-backdrop="static" , data-target="#modal-forgot", data-dismiss="modal") 忘记密码?

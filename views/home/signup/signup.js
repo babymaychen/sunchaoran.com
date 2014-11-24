@@ -135,9 +135,9 @@ exports.signup = function (req, res) {
         req.app.utility.sendmail(req, res, {
             from: req.app.config.smtp.from.name + ' <' + req.app.config.smtp.from.address + '>',
             to: req.body.email,
-            subject: 'Your ' + req.app.config.projectName + ' Account',
-            textPath: 'home/signupemail/email-text',
-            htmlPath: 'home/signupemail/email-html',
+            subject: '您的 ' + req.app.config.projectName + ' 账户',
+            textPath: 'home/signup/signupemail/emailText',
+            htmlPath: 'home/signup/signupemail/emailHtml',
             locals: {
                 username: req.body.username,
                 email: req.body.email,
@@ -148,7 +148,7 @@ exports.signup = function (req, res) {
                 workflow.emit('logUserIn');
             },
             error: function (err) {
-                console.log('Error Sending Welcome Email: ' + err);
+                console.log('发送 Welcome Email 出错: ' + err);
                 workflow.emit('logUserIn');
             }
         });

@@ -18,8 +18,8 @@ exports = module.exports = function (app, passport) {
                 }
 
                 if (!user) {
-                    console.log('Unknown user');
-                    return done(null, false, {message: 'Unknown user'});
+                    console.log('|Passport| -> 未知的用户');
+                    return done(null, false, {message: '未知的用户'});
                 }
 
                 app.db.models.User.validatePassword(password, user.password, function (err, isValid) {
@@ -28,8 +28,8 @@ exports = module.exports = function (app, passport) {
                     }
 
                     if (!isValid) {
-                        console.log('Invalid password');
-                        return done(null, false, {message: 'Invalid password'});
+                        console.log('|Passport| -> 错误的密码');
+                        return done(null, false, {message: '错误的密码'});
                     }
 
                     return done(null, user);
